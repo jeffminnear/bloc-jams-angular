@@ -36,7 +36,8 @@ body.landing {
     padding: 2rem;
     text-align: center;
     opacity: 1;
-    color: black;
+    color: white;
+    /*color: black;
     -webkit-transform: scaleX(0.3) scaleY(0.5) translateY(3rem) rotate(45deg);
     -moz-transform: scaleX(0.3) scaleY(0.5) translateY(3rem) rotate(45deg);
     transform: scaleX(0.3) scaleY(0.5) translateY(3rem) rotate(45deg);
@@ -51,7 +52,7 @@ body.landing {
     transition-timing-function: ease-out, ease-out, ease-in;
     -webkit-transition-delay: 0.2s;
     -moz-transitiion-delay: 0.2s;
-    transition-delay: 0.2s;
+    transition-delay: 0.2s;*/
 }
 
 .point .point-title {
