@@ -1,67 +1,66 @@
 body.landing {
-    background-color: rgb(58,23,63);
+  background-color: #3a173f;
 }
-
 .hero-content {
-    position: relative;
-    min-height: 600px;
-    background-image: url(../assets/images/bloc_jams_bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+  position: relative;
+  min-height: 600px;
+  background-image: url(../assets/images/bloc_jams_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
-
 .hero-content .hero-title {
-    position: absolute;
-    top: 40%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 100%;
-    text-align: center;
-    font-size: 4rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    text-shadow: 1px 1px 0px rbg(58,23,63);
+  position: absolute;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  text-shadow: 1px 1px 0px rbg(58, 23, 63);
 }
-
 .selling-points {
-    position: relative;
+  position: relative;
 }
-
 .point {
-    position: relative;
-    padding: 2rem;
-    text-align: center;
-    opacity: 1;
-    color: white;
-    /*color: black;
-    -webkit-transform: scaleX(0.3) scaleY(0.5) translateY(3rem) rotate(45deg);
-    -moz-transform: scaleX(0.3) scaleY(0.5) translateY(3rem) rotate(45deg);
-    transform: scaleX(0.3) scaleY(0.5) translateY(3rem) rotate(45deg);
-    -webkit-transition-property: opacity, transform, color;
-    -webkit-transition-duration: 0.5s, 0.5s, 0.7s;
-    -webkit-transition-timing-function: ease-out, ease-out, ease-in;
-    -moz-transition-property: opacity, transform, color;
-    -moz-transition-duration: 0.5s, 0.5s, 0.7s;
-    -moz-transition-timing-function: ease-out, ease-out, ease-in;
-    transition-property: opacity, transform, color;
-    transition-duration: 0.5s, 0.5s, 0.7s;
-    transition-timing-function: ease-out, ease-out, ease-in;
-    -webkit-transition-delay: 0.2s;
-    -moz-transitiion-delay: 0.2s;
-    transition-delay: 0.2s;*/
+  position: relative;
+  padding: 2rem;
+  text-align: center;
+  opacity: 1;
+  color: white;
+  /*color: black;
+  -webkit-transform: scaleX(0.3) scaleY(0.5) translateY(3rem) rotate(45deg);
+  -moz-transform: scaleX(0.3) scaleY(0.5) translateY(3rem) rotate(45deg);
+  -ms-transform: scaleX(0.3) scaleY(0.5) translateY(3rem) rotate(45deg);
+  transform: scaleX(0.3) scaleY(0.5) translateY(3rem) rotate(45deg);
+  -webkit-transition-property: opacity, transform, color;
+  -moz-transition-property: opacity, transform, color;
+  -ms-transition-property: opacity, transform, color;
+  transition-property: opacity, transform, color;
+  -webkit-transition-duration: 0.5s, 0.5s, 0.7s;
+  -moz-transition-duration: 0.5s, 0.5s, 0.7s;
+  -ms-transition-duration: 0.5s, 0.5s, 0.7s;
+  transition-duration: 0.5s, 0.5s, 0.7s;
+  -webkit-transition-timing-function: ease-out, ease-out, ease-in;
+  -moz-transition-timing-function: ease-out, ease-out, ease-in;
+  -ms-transition-timing-function: ease-out, ease-out, ease-in;
+  transition-timing-function: ease-out, ease-out, ease-in;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -ms-transition-delay: 0.2s;
+  transition-delay: 0.2s;*/
 }
-
 .point .point-title {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
-
 .ion-music-note,
 .ion-radio-waves,
 .ion-iphone {
-    color: rgb(233,50,117);
-    font-size: 5rem;
+  color: #e93275;
+  font-size: 5rem;
 }
