@@ -1,0 +1,66 @@
+body.landing {
+    background-color: rgb(58,23,63);
+}
+
+.transform(@transform) {
+    -webkit-transform: @transform;
+    -moz-transform: @transform;
+    -ms-transform: @transform;
+    transform: @transform;
+}
+
+.transition(@transition; @rest...) {
+  -webkit-transition@{rest}: @transition;
+  -moz-transition@{rest}: @transition;
+  -ms-transition@{rest}: @transition;
+  transition@{rest}: @transition;
+}
+
+.hero-content {
+    position: relative;
+    min-height: 600px;
+    background-image: url(../assets/images/bloc_jams_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    .hero-title {
+        position: absolute;
+        top: 40%;
+        .transform(translateY(-50%));
+        width: 100%;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        text-shadow: 1px 1px 0px rbg(58,23,63);
+    }
+}
+
+.selling-points {
+    position: relative;
+}
+
+.point {
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+    opacity: 1;
+    color: white;
+    color: black;
+    .transform(scaleX(0.3) scaleY(0.5) translateY(3rem) rotate(45deg));
+    .transition(opacity, transform, color; -property);
+    .transition(0.5s, 0.5s, 0.7s; -duration);
+    .transition(ease-out, ease-out, ease-in; -timing-function);
+    .transition(0.2s; -delay);
+    .point-title {
+        font-size: 1.25rem;
+    }
+}
+
+.ion-music-note,
+.ion-radio-waves,
+.ion-iphone {
+    color: rgb(233,50,117);
+    font-size: 5rem;
+}

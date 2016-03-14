@@ -1,0 +1,90 @@
+.album-cover-art {
+    position: relative;
+    left: 20%;
+    margin-top: 1rem;
+    width: 60%;
+}
+
+@av: album-view;
+
+.@{av}-details {
+    position: relative;
+    top: 1.5rem;
+    padding: 1rem;
+    .@{av}-title {
+        font-weight: 300;
+        font-size: 2rem;
+    }
+    .@{av}-artist {
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+    .@{av}-release-info {
+        font-weight: 300;
+        font-size: 0.75rem;
+    }
+}
+
+.@{av}-song-list {
+    width: 90%;
+    margin: 1.5rem auto;
+    font-weight: 300;
+    font-size: 0.75rem;
+}
+
+@si: song-item;
+
+.@{av}-@{si} {
+    height: 3rem;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+.@{si}-number {
+    width: 5%;
+    min-width: 30px;
+}
+
+.@{si}-title {
+    width: 85%;
+}
+
+.@{si}-duration {
+    width: 5%;
+}
+
+.album-song-button {
+    text-align: center;
+    font-size: 14px;
+    background-color: white;
+    color: rgb(210, 40, 123);
+    border-radius: 50% 50%;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(210, 40, 123);
+        color: white;
+    }
+    span {
+       line-height: 28px;
+    }
+}
+
+@media (max-width: 40rem) and (min-width: 20rem) {
+    .@{av}-details {
+        text-align: center;
+    }
+
+    .@{av}-title {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 64rem) and (min-width: 20rem) {
+    .@{av}-song-list {
+        position: relative;
+        top: 1rem;
+        width: 80%;
+        margin: auto;
+    }
+}
