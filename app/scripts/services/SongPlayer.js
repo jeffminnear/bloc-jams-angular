@@ -28,15 +28,18 @@
             currentSong = song;
         };
 
+        var playSong = function playSong(song) {
+            currentBuzzObject.play();
+            song.playing = true;
+        };
+
         SongPlayer.play = function play(song) {
             if (currentSong !== song) {
                 setSong(song);
-                currentBuzzObject.play();
-                song.playing = true;
+                playSong(song);
             } else if (currentSong === song) {
                 if (currentBuzzObject.isPaused()) {
-                    currentBuzzObject.play();
-                    song.playing = true;
+                    playSong(song);
                 }
             }
         };
