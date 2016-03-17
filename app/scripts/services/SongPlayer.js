@@ -1,8 +1,26 @@
 (function () {
+    /**
+    * @function SongPlayer
+    * @desc Constructs the SongPlayer object
+    * @returns {Object}
+    */
     function SongPlayer() {
+        /**
+        * @desc The instantiated SongPlayer object
+        * @type {Object}
+        */
         var SongPlayer = {};
 
+        /**
+        * @desc The currently selected song
+        * @type {Object}
+        */
         var currentSong = null;
+
+        /**
+        * @desc Buzz object audio file
+        * @type {Object}
+        */
         var currentBuzzObject = null;
 
         /**
@@ -16,10 +34,6 @@
                 currentSong.playing = null;
             }
 
-            /**
-            * @desc Buzz object audio file
-            * @type {Object}
-            */
             currentBuzzObject = new buzz.sound(song.audioUrl, {
                 formats: ['mp3'],
                 preload: true
@@ -28,11 +42,21 @@
             currentSong = song;
         };
 
+        /**
+        * @function playSong
+        * @desc Starts or resumes playback of the currentBuzzObject audio file
+        * @param {Object} song
+        */
         var playSong = function playSong(song) {
             currentBuzzObject.play();
             song.playing = true;
         };
 
+        /**
+        * @function play
+        * @desc Assigns and plays a new audio file or resumes playback of the curent one
+        * @param {Object} song
+        */
         SongPlayer.play = function play(song) {
             if (currentSong !== song) {
                 setSong(song);
@@ -44,6 +68,10 @@
             }
         };
 
+        /**
+        @function pause
+        @desc Pauses playback of the current audio file
+        */
         SongPlayer.pause = function pause(song) {
             currentBuzzObject.pause();
             song.playing = false;
