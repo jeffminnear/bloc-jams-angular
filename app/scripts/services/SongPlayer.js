@@ -98,13 +98,32 @@
         /**
         * @function previous
         * @desc Skips to previous song and begins playback
-                If first song is playing, stops playback and sets current song to null
+                If first song is playing, stops playback
         */
         SongPlayer.previous = function previous() {
             var currentSongIndex = getSongIndex(SongPlayer.currentSong);
             currentSongIndex--;
 
             if (currentSongIndex < 0) {
+                currentBuzzObject.stop();
+                SongPlayer.currentSong.playing = null;
+            } else {
+                var song = currentAlbum.songs[currentSongIndex];
+                setSong(song);
+                playSong(song);
+            }
+        };
+
+        /**
+        * @function next
+        * @desc Skips to next song and begins playback
+                If last song is playing, stops playback
+        */
+        SongPlayer.next = function next() {
+            var currentSongIndex = getSongIndex(SongPlayer.currentSong);
+            currentSongIndex++;
+
+            if (currentSongIndex > currentAlbum.songs.length - 1) {
                 currentBuzzObject.stop();
                 SongPlayer.currentSong.playing = null;
             } else {
