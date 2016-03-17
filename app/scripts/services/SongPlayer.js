@@ -97,7 +97,8 @@
 
         /**
         * @function previous
-        * @desc ################
+        * @desc Skips to previous song and begins playback
+                If first song is playing, stops playback and sets current song to null
         */
         SongPlayer.previous = function previous() {
             var currentSongIndex = getSongIndex(SongPlayer.currentSong);
