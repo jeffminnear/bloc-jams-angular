@@ -88,6 +88,8 @@
         */
         SongPlayer.currentTime = null;
 
+        SongPlayer.volume = 80;
+
         /**
         * @function play
         * @desc Assigns and plays a new audio file or resumes playback of the curent one
@@ -154,6 +156,12 @@
         SongPlayer.setCurrentTime = function setCurrentTime(time) {
             if (currentBuzzObject) {
                 currentBuzzObject.setTime(time);
+            }
+        };
+
+        SongPlayer.setVolume = function setVolume(volume) {
+            if (currentBuzzObject) {
+                currentBuzzObject.setVolume(volume);
             }
         };
 
