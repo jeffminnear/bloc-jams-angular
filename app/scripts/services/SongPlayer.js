@@ -4,7 +4,7 @@
     * @desc Constructs the SongPlayer object
     * @returns {Object}
     */
-    function SongPlayer(Fixtures) {
+    function SongPlayer($rootScope, Fixtures) {
         /**
         * @desc The instantiated SongPlayer object
         * @type {Object}
@@ -48,6 +48,12 @@
                 preload: true
             });
 
+            currentBuzzObject.bind('timeupdate', function () {
+                $rootScope.$apply(function () {
+                    SongPlayer.currentTime = currentBuzzObject.getTime();
+                });
+            });
+
             SongPlayer.currentSong = song;
         };
 
@@ -75,6 +81,12 @@
         * @type {Object}
         */
         SongPlayer.currentSong = null;
+
+        /**
+        * @desc Current playback time (in seconds) of currently playing song
+        * @type {Number}
+        */
+        SongPlayer.currentTime = null;
 
         /**
         * @function play
@@ -139,10 +151,16 @@
             }
         };
 
+        SongPlayer.setCurrentTime = function setCurrentTime(time) {
+            if (currentBuzzObject) {
+                currentBuzzObject.setTime(time);
+            }
+        };
+
         return SongPlayer;
     }
 
     angular
         .module('blocJams')
-        .factory('SongPlayer', ['Fixtures', SongPlayer]);
+        .factory('SongPlayer', ['$rootScope', 'Fixtures', SongPlayer]);
 })();
